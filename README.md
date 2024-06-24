@@ -25,6 +25,7 @@ The goal of this project is to predict vascular age using ECG (Electrocardiogram
 - **Output Format**: The predictions from the model are stored in a CSV format. This allows for easy analysis and further processing of the predicted vascular ages.
 
 ## Model: Llama-2-13b
+
 This project involves a text generation model that has been fine-tuned on ECG (Electrocardiogram) data and deployed privately on Hugging Face's model hub. The model specializes in predicting the vascular age of subjects based on their ECG features and demographic information.
 
 ### Deployment Details
@@ -49,6 +50,24 @@ This project involves a text generation model that has been fine-tuned on ECG (E
   
 - **Output**: Based on the user's input, the model generates predictions for the vascular age of the subject. This output estimates the age of blood vessels based on ECG data, crucial for cardiovascular health assessment.
 
-
 ## Model: Idefics-9b
 
+Idefics-9b is a multimodal model designed to process both image and text inputs and generate textual outputs. The model's primary objective is to predict the vascular age of a subject based on ECG signal images along with their age and demographic information provided as text inputs.
+
+### Model Logic
+
+The underlying logic of Idefics-9b involves:
+- **Input Modality**: Accepting an ECG signal image alongside textual data containing the subject's age and demographic details.
+- **Learning from Images**: By processing the ECG signal image, the model learns to identify patterns and features that correlate with vascular age.
+
+### Deployment and Configuration
+
+- **Hosting**: The model and its associated data are privately hosted on Hugging Face's model hub.
+- **Data Splitting**: The dataset is split into 20% test and 80% train sets using a standard ratio to evaluate model performance and prevent overfitting.
+- **Adjustable Parameters**: Users can adjust Qlora parameters to customize model behavior according to specific needs.
+- **Fine-Tuning**: The model undergoes fine-tuning using a "Trainer" to enhance its predictive capabilities based on the provided data.
+
+### Usage
+
+- **Input and Output**: Users can input an ECG image and receive an output that predicts the vascular age of the subject in textual form.
+- **Health Assessment**: This capability supports personalized health assessments by leveraging ECG data to estimate vascular age, which is crucial for evaluating cardiovascular health.
