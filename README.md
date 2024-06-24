@@ -7,15 +7,15 @@ The goal is to predict vascular age using ECG (Electrocardiogram) data along wit
 **Model: Cohere**
 ***Training Process:***
 
-- Data Splitting: The initial dataset is split using the train_test_split function from sklearn. This function divides the data into two parts: 80% for training (train) and 20% for testing (test).
+- ****Data Splitting****: The initial dataset is split using the train_test_split function from sklearn. This function divides the data into two parts: 80% for training (train) and 20% for testing (test).
 
-- Data Formatting: The training data is then formatted into a specific text generation format required by the Cohere model. This format includes all relevant ECG features and demographic details. These are structured as a user message.
+- Data Formatting: The training data is then formatted into a specific text generation format required by the Cohere model. This format includes all relevant ECG features and demographic details. These are structured as a "user_message".
 
-    Model Output: During training, the Cohere model predicts the vascular age based on the input data. The output of this prediction is generated under the section called "chatbot message."
+- Model Output: During training, the Cohere model predicts the vascular age based on the input data. The output of this prediction is generated under the section called "chatbot_message."
 
-    File Output: The predictions are saved in a .jsonl file format. This file contains the predicted vascular age for each subject.
+- File Output: The predictions are saved in a .jsonl file format. This file contains the predicted vascular age for each subject.
 
-Prediction Phase:
+***Prediction Phase:***
 
     Input Data: For making predictions using the fine-tuned Cohere model, a large CSV file is used. This CSV file contains data for hundreds of subjects, including their ECG features and demographic information.
 
